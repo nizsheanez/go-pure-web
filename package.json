@@ -1,0 +1,11 @@
+{
+  "name": "go-mobile",
+  "version": "0.0.1",
+  "scripts": {},
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.7.2",
+    "@fortawesome/fontawesome-free": "^5.5.0",
+    "source-map-support": "^0.5.9"
+  }
+}
