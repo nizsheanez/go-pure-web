@@ -11,7 +11,6 @@ type Item struct {
 	Title string
 }
 
-
 func item(it Item) vecty.ComponentOrHTML {
 	console.Log("item: render")
 	return elem.ListItem(

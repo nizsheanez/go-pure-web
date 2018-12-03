@@ -19,6 +19,10 @@ func InstallDeps() error {
 		return err
 	}
 
+	if err := goGet("-u", "github.com/gopherjs/gopherjs"); err != nil {
+		return err
+	}
+
 	return npm("i")
 }
 
@@ -33,4 +37,9 @@ func goMod(args ...string) error {
 
 func gopherJs(args ...string) error {
 	return sh.RunWith(map[string]string{"GO111MODULE": "on"}, "gopherjs", args...)
+}
+
+func goGet(args ...string) error {
+	args = append(append([]string{}, "get"), args...)
+	return sh.Run( "go", args...)
 }
